@@ -21,8 +21,9 @@ def Rotacion_M(X0, Y0, Z0, M):
 
 # rotar los valores : X0, Y0, Z0, en el plano XY, un ángulo theta.
 def Rotacion(X0, Y0, Z0, theta): 
-    X = np.dot(np.cos(theta), X0) + np.dot(-np.sin(theta), Y0)
-    Y = np.dot(np.sin(theta), X0) + np.dot(np.cos(theta), Y0)
+    xc, yc = X0.mean(), Y0.mean()
+    X = np.dot(np.cos(theta), X0-xc) + np.dot(-np.sin(theta), Y0-yc) + xc
+    Y = np.dot(np.sin(theta), X0-xc) + np.dot(np.cos(theta), Y0-yc) + yc
     Z = Z0
     return X, Y, Z
 
@@ -40,8 +41,8 @@ def plot_frame_1(t, X0, Y0, Z0, theta, traslacion, ax):
 
     # settings
     ax.clear()
-    ax.set_xlim(-75, 75)
-    ax.set_ylim(-75, 75)
+    ax.set_xlim(-100, 0)
+    ax.set_ylim(-100, 0)
     ax.set_zlim(-100, 250)
     ax.set_title("Rotación + Traslación : figura 3D")
     
@@ -91,8 +92,8 @@ def plot_frame_2(t, X0, Y0, Z0, theta, traslacion, ax):
 
     # settings
     ax.clear()
-    ax.set_xlim(-600,300)
-    ax.set_ylim(-100,1000)
+    ax.set_xlim(-400,300)
+    ax.set_ylim(400,1100)
     ax.set_zlim(-1,1)
     ax.set_title("Rotación + Traslación : imagen 2D")
 
@@ -124,7 +125,7 @@ def problema1(save_gif=False):
     traslacion = np.linspace(0, d, N)
     ani = create_animation_1(X, Y, Z, theta, traslacion)
     if save_gif:
-        ani.save("figura_3d.gif", fps = 10) 
+        ani.save("images/figura_3d.gif", fps = 10) 
     plt.show()
 
 def problema2(save_gif=False):
@@ -150,7 +151,7 @@ def problema2(save_gif=False):
     c = 3 # calidad de la imagen # c = 1 es lo mejor, con {2,3,..} mejoramos la velocidad del gif (ploteamos menos puntos) pero empeoramos la imagen
     ani = create_animation_2(x0[::c], y0[::c], z0[::c], theta, traslacion)
     if save_gif:
-        ani.save("arbol.gif", fps = 10) 
+        ani.save("images/arbol.gif", fps = 10) 
     plt.show()
 
 #os.chdir()
@@ -159,5 +160,5 @@ def problema2(save_gif=False):
 
 
 if __name__ == "__main__":
-    problema1(save_gif=False)
-    problema2(save_gif=False)
+    problema1(save_gif=True)
+    problema2(save_gif=True)
