@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from matplotlib import animation
 from mpl_toolkits.mplot3d import axes3d
 from matplotlib import animation
-from skimage import io, color
+from skimage import io
 
 #os.getcwd()
 #os.chdir()
@@ -129,7 +129,7 @@ def problema1(save_gif=False):
 
 def problema2(save_gif=False):
 
-    img = io.imread('arbol.png')
+    img = io.imread('images/arbol.png')
     x0, y0, z0 = get_xyz(img)
     xc, yc = x0.mean(), y0.mean() 
 
