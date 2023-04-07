@@ -19,7 +19,7 @@ def Rotacion_M(X0, Y0, Z0, M):
     Z = np.dot(M[2,0], X0) + np.dot(M[2,1], Y0) + np.dot(M[2,2], Z0)
     return X, Y, Z
 
-# rotar los valores : X0, Y0, Z0, en el plano XY, un ángulo theta.
+# rotar los valores : X0, Y0, Z0, en el plano XY, un ángulo theta sobre su centroide.
 def Rotacion(X0, Y0, Z0, theta): 
     xc, yc = X0.mean(), Y0.mean()
     X = np.dot(np.cos(theta), X0-xc) + np.dot(-np.sin(theta), Y0-yc) + xc
