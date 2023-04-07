@@ -53,19 +53,34 @@ $$
 
 Para generar una figura 3d aleatoria, utilizamos la función *axes3d.get_test_data()* predefinada de python. Para las rotaciones y traslaciones, hemos definido las funciones *Rotacion* y *Traslación* respectivamente. Una vez definidas y con los datos cargados podemos crear la animación. Además, para apreciar la subida de nivel en el eje $z$ de la figura, he graficado el centroide de la figura en el plano $\lbrace z=0\rbrace$ para poder tener punto de referencia fijo. Podemos observar aquí una pequeña animación de la transaformación de la figura.
 
-<div style="align:center;">
-  <image src="/images/figura_3d.png" style="width:70%; height:8cm;">
+<div style="text-align:center;">
+  <image src="/images/figura_3d.gif" style="width:100%; height:12cm;">
 </div>
+
+También podemos hacer rotaciones que no sean respecto al centroide, si no al punto (0,0) como por ejemplo la siguiente.
  
+<div style="text-align:center;">
+  <image src="/images/figura_3d_2.gif" style="width:100%; height:12cm;">
+</div>
+
 ### Pregunta 2 <a name=id3.2></a>
 
-La imagen es de $350\times350$ pixeles por lo que a la hora de realizar la animación tiene que plotear 122.500 puntos (aunque terminan siendo cerca de los 40.000 cuando filtramos con el verde $< 240$). En todo caso son una gran cantidad de puntos únicamente para plotear una pequeña imagen en el gráfico. En caso de plotear todos los puntos la animación va un poco lenta. Ahora bien, podemos evitar una serie de puntos (perdiendo así calidad de imagen) ploteando únicamente 1 de cada 2 puntos o incluso 1 de cada 3, el cual es el caso del gif resultado que adjunto, *arbol.gif*. Hay que tener cuidado de la distribución de los puntos en la imagen, es decir, es muy diferente quitar 1 de cada 3 puntos de forma uniformente distribuida por todo el conjunto de la figura a quitar 1/3 de la figura por una única parte, lo que afectará gravemente pues el resultado. Por otro lado, también nos piden observar el centroide del árbol, el cual se puede apreciar en la siguiente imagen.
+La imagen es de $350\times350$ pixeles por lo que a la hora de realizar la animación tiene que plotear 122.500 puntos (aunque terminan siendo cerca de los 40.000 cuando filtramos con el verde $< 240$). En todo caso son una gran cantidad de puntos únicamente para plotear una pequeña imagen en el gráfico. En caso de plotear todos los puntos la animación va un poco lenta. Ahora bien, podemos evitar una serie de puntos (perdiendo así calidad de imagen) ploteando únicamente 1 de cada 2 puntos o incluso 1 de cada 3, el cual es el caso del gif resultado que adjunto, *arbol.gif*. Hay que tener cuidado de la distribución de los puntos en la imagen, es decir, es muy diferente quitar 1 de cada 3 puntos de forma uniformente distribuida por todo el conjunto de la figura a quitar 1/3 de la figura por una única parte, lo que afectará gravemente pues el resultado.
 
-<div style="align:center;">
-  <image src="/images/figura_2d.png" style="width:40%; height:8cm;">
-  <image src="/images/centroide.png" style="width:40%; height:8cm;">
+<div style="text-align:center;">
+  <image src="/images/arbol.gif" style="width:100%; height:12cm;">
 </div>
 
-Se puede observar que nuevamente he añadido el centroide en un plano más abajo de la imagen del árbol para poder seguir el movimiento de una forma más clara. Además también observar como la calidad de la imagen en el gráfico 3d (en la imagen 2d del centroide está completa) se mantiene la calidad bastante bien. Por lo que no perdemos resolución y ayudamos al procesamiento de la animación. 
+Se puede observar que nuevamente he añadido el centroide en un plano más abajo de la imagen del árbol para poder seguir el movimiento de una forma más clara. Además también observar como la calidad de la imagen en el gráfico 3d (en la imagen 2d del centroide está completa) se mantiene la calidad bastante bien. Por lo que no perdemos resolución y ayudamos al procesamiento de la animación. Además al igual que en el apartado anterior cambiando la función rotación podemos obtener distintos resultados como el siguiente.
+
+<div style="text-align:center;">
+  <image src="/images/arbol_2.gif" style="width:100%; height:12cm;">
+</div>
+
+Por último, también nos piden observar el centroide del árbol, el cual se puede apreciar en la siguiente imagen.
+
+<div style="text-align:center;">
+  <image src="/images/centroide.png" style="width:50%; height:10cm;">
+</div>
  
 
