@@ -1,4 +1,4 @@
-# TRANSFORMACIÓN ISOMÉTRICA AFÍN
+# Transformación Isométrica Afín
 
 ## Índice 
 
@@ -11,7 +11,7 @@
       
 ## Enunciado <a name=id0></a>
 
-Dado un sistema con $N$ elementos, $S = \lbrace \rbrace$, consideramos la transformación isométrica afı́n correspondiente a una rotación $R_\theta^{(x,y)}$ aplicada en torno al centroide del sistema, y una translación $v = (v_1, v_2, \dots)$. Considera para ello la métrica euclı́dea.
+Dado un sistema con $N$ elementos, $S$, consideramos la transformación isométrica afı́n correspondiente a una rotación $R_\theta^{(x,y)}$ aplicada en torno al centroide del sistema, y una translación $v = (v_1, v_2, \dots)$. Considera para ello la métrica euclı́dea.
 
  1) Genera una figura en 3 dimensiones y realiza una animación de una familia paramétrica continua que reproduzca desde la identidad hasta la
 transformación simultánea de una rotación de $\theta = 3\pi$ y una translación con $v = (0, 0, d)$, donde $d$ es el diámetro mayor de $S$.
