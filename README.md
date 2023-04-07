@@ -10,7 +10,18 @@
       - [Pregunta 2](#id3.2)
       
 ## Enunciado <a name=id0></a>
-	
+
+Dado un sistema con $N$ elementos, $S = \lbrace \rbrace$, consideramos la transformación isométrica afı́n correspondiente a una rotación $R_\theta^{(x,y)}$ aplicada en torno al centroide del sistema, y una translación $v = (v_1, v_2, \dots)$. Considera para ello la métrica euclı́dea.
+
+ 1) Genera una figura en 3 dimensiones y realiza una animación de una familia paramétrica continua que reproduzca desde la identidad hasta la
+transformación simultánea de una rotación de $\theta = 3\pi$ y una translación con $v = (0, 0, d)$, donde $d$ es el diámetro mayor de $S$.
+
+ 2) Dado el sistema representado por la imagen digital *arbol.png*, considera el subsistema $\sigma$ dado por el segund color (verde) cuando verde $< 240$. ¿Dónde se sitúa el centroide? Realiza la misma transformación que en el apartado anterior, con $\theta = 3\pi$ y $v = (d, d, 0)$, donde $d$ es el diámetro mayor de $\sigma$.
+
+<div style="text-align:center;">
+  <image src="/images/arbol.png" style="width:40%; height:8cm;">
+</div>
+
 ## Introducción <a name=id1></a>
 
 La transformación isométrica afín es una operación matemática utilizada en geometría para transformar figuras geométricas en el plano. Es una transformación rígida que mantiene las distancias entre los puntos y las proporciones de las figuras, por lo que es útil para conservar la simetría y la estructura de las formas. Las transformaciones isométricas afines incluyen rotaciones, traslaciones, reflexiones y combinaciones de estas operaciones. Son herramientas importantes en la geometría, ya que permiten transformar figuras geométricas de manera precisa y eficiente.
