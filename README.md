@@ -51,7 +51,22 @@ $$
  
 ### Pregunta 1 <a name=id3.1></a>
 
-Para generar una figura 3d aleatoria, utilizamos la función *axes3d.get_test_data()* predefinada de python. Para las rotaciones y traslaciones, hemos definido las funciones *Rotacion* y *Traslación* respectivamente. Una vez definidas y con los datos cargados podemos crear la animación. Además, para apreciar la subida de nivel en el eje $z$ de la figura, he graficado el centroide de la figura en el plano $\lbrace z=0\rbrace$ para poder tener punto de referencia fijo. Podemos observar aquí una pequeña animación de la transaformación de la figura.
+Para generar una figura 3d aleatoria, utilizamos la función *axes3d.get_test_data()* predefinada de python. Para las rotaciones y traslaciones, hemos definido las funciones *Rotacion* y *Traslación* respectivamente. 
+
+```python
+def Rotacion(X0, Y0, Z0, theta): 
+    xc, yc = X0.mean(), Y0.mean()
+    X = np.dot(np.cos(theta), X0-xc) + np.dot(-np.sin(theta), Y0-yc) + xc
+    Y = np.dot(np.sin(theta), X0-xc) + np.dot(np.cos(theta), Y0-yc) + yc
+    Z = Z0
+    return X, Y, Z
+
+def Traslacion(X0, Y0, Z0, t, a=0, b=0, c=0):
+    X, Y, Z = a*t+X0, b*t + Y0, c*t+Z0
+    return X, Y, Z
+```
+
+Una vez definidas y con los datos cargados podemos crear la animación. Además, para apreciar la subida de nivel en el eje $z$ de la figura, he graficado el centroide de la figura en el plano $\lbrace z=0\rbrace$ para poder tener punto de referencia fijo. Podemos observar aquí una pequeña animación de la transaformación de la figura.
 
 <div style="text-align:center;">
   <image src="/images/figura_3d.gif" style="width:100%; height:12cm;">
