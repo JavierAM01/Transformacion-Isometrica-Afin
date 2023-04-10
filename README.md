@@ -29,7 +29,7 @@ La transformación isométrica afín es una operación matemática utilizada en 
 ## Material usado <a name=id2></a>
 	
  - Lenguaje de programación: python.
- - Material externo: *arbol.png*, imagen necesaria para la realización de la segunda pregunta.
+ - Material externo: *arbol.png*, imagen necesaria para la realización de la segunda parte.
  - Librerías: 
  	- *matplotlib*: para las gráficas.
 	- *skimage*: para cargar la imagen mencionada anteriormente en python como matriz de pixeles.
